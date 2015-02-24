@@ -10,28 +10,26 @@
  */
 
 var app = angular.module('docereApp', [
-  'ngRoute'
+  'ngRoute',
+  'firebase'
 ]);
 
-app.config(['$routeProvider', '$locationProvider',
-  function ($routeProvider, $locationProvider) {
-
+app.config(function ($routeProvider, $locationProvider) {
     $locationProvider.hashPrefix('!');
 
     $routeProvider
-      .when('/main', {
-        templateUrl: '/views/main.html',
-        controller: 'MainCtrl'
+      .when('/', {
+        templateUrl: '/views/main.html'
       })
       .when('/subject', {
         templateUrl: '/views/subject.html',
-        controller: 'MainCtrl'
+        controller: 'SubjectCtrl'
       })
       /*.when('/subject/:title', {
 
-      })*/
+       })*/
       .otherwise({
         redirectTo: '/main'
       });
   }
-]);
+);
