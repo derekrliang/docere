@@ -2,11 +2,7 @@
 
 var app = angular.module('docereApp');
 
-app.controller('SubjectCtrl', function ($scope, $location) {
-
-    $scope.isActive = function(route) {
-      return route === $location.path();
-    };
+app.controller('SubjectCtrl', function ($scope) {
 
     $scope.welcome = 'hello';
   }
