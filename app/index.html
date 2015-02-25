@@ -25,6 +25,11 @@
         <ul class="nav nav-pills pull-right">
           <li ng-class="{active:isActive('/')}"><a ng-href="#!/">Home</a></li>
           <li ng-class="{active:isActive('/subject')}"><a ng-href="#!/subject">Subject</a></li>
+          <li ng-class="{active:isActive('/chat')}"><a ng-href="#!/chat">Chat</a></li>
+          <li>
+            <a ng-class="{active:isActive('/login')}" ng-hide-auth="" href="#!/login">Log In</a>
+            <a ng-class="{active:isActive('/account')}" ng-show-auth="" href="#!/account">Account</a>
+          </li>
         </ul>
         <h3 class="text-muted">docere</h3>
       </div>
@@ -80,9 +85,19 @@
     <!-- endbuild -->
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
-        <script src="scripts/app.js"></script>
+    <script src="scripts/app.js"></script>
     <script src="scripts/controllers/MainCtrl.js"></script>
     <script src="scripts/controllers/SubjectCtrl.js"></script>
+    <script src="scripts/angularfire/config.js"></script>
+    <script src="scripts/angularfire/firebase.utils.js"></script>
+    <script src="scripts/controllers/ChatCtrl.js"></script>
+    <script src="scripts/filters/reverse.js"></script>
+    <script src="scripts/angularfire/simpleLogin.js"></script>
+    <script src="scripts/controllers/LoginCtrl.js"></script>
+    <script src="scripts/controllers/AccountCtrl.js"></script>
+    <script src="scripts/directives/ngShowAuth.js"></script>
+    <script src="scripts/directives/ngHideAuth.js"></script>
+    <script src="scripts/routes.js"></script>
         <!-- endbuild -->
 </body>
 </html>

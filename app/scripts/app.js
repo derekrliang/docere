@@ -11,9 +11,12 @@
 
 var app = angular.module('docereApp', [
   'ngRoute',
-  'firebase'
+  'firebase',
+  'firebase.utils',
+  'simpleLogin'
 ]);
 
+/*
 app.config(function ($routeProvider, $locationProvider) {
     $locationProvider.hashPrefix('!');
 
@@ -25,11 +28,11 @@ app.config(function ($routeProvider, $locationProvider) {
         templateUrl: '/views/subject.html',
         controller: 'SubjectCtrl'
       })
-      /*.when('/subject/:title', {
-
-       })*/
+      //.when('/subject/:title', {})
       .otherwise({
         redirectTo: '/main'
       });
   }
 );
+
+*/
